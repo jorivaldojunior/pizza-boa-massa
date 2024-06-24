@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--meta tag og-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pizzaria Boa Massa - A Melhor Pizza!" />
+    <meta property="og:image" content="https://pizzaria-boa-massa.netlify.app/assets/logo1.jpg" />
+    <meta property="og:description" content="A Melhor massa e recheio inesquecível!" />
+    <meta property="og:site_name" content="PizzariaBoaMassa" />
+
+
+
+    <title>Pizzaria Boa Massa</title>
+    <style>
+        body {
+            background-image: url('./assets/bg.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            /* Definindo Roboto como fonte padrão */
+        }
+
+        h1 {
+            font-family: 'Indie Flower', cursive;
+            /* Aplicando Indie Flower ao h1 */
+            color: orange;
+            /* Definindo a cor laranja para o texto do h1 */
+        }
+
+        .menu-item {
+            font-family: 'Indie Flower', cursive;
+            /* Aplicando Indie Flower aos itens do menu */
+        }
+
+        .footer-text {
+            font-family: 'Indie Flower', cursive;
+            /* Aplicando Indie Flower ao texto do footer */
+        }
+
+        .btn-pedido {
+            font-family: 'Indie Flower', cursive;
+            /* Aplicando Indie Flower ao botão "Faça seu Pedido" */
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+    </style>
+</head>
+
+<body class="flex flex-col">
+    <!-- Header -->
+    <header class="bg-red-600 p-4 fixed w-full top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img src="./assets/logo1.jpg" alt="logo" class="h-12 w-12 rounded-full">
+            </div>
+            <ul class="flex space-x-4 text-white">
+                <li><a href="#home" class="hover:underline menu-item">Inicio</a></li>
+                <li><a href="cardapio.html" class="hover:underline menu-item">Pizzas</a></li>
+                <li><a href="bebidas.html" class="hover:underline menu-item">Bebidas</a></li>
+                <li><a href="https://www.instagram.com/Pizzariaboa_massa2019" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Fim Header -->
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center text-center text-white px-4 mt-16">
+        <h1 class="text-3xl font-bold text-orange-600 mb-4" style="color: orange;">Olá! Seja bem-vindo(a) à Pizzaria Boa
+            Massa!!!</h1>
+        <button
+            class="bg-green-600 text-white py-2 px-4 mt-4 rounded-lg hover:bg-yellow-700 transition duration-300 btn-pedido"
+            onclick="location.href='cardapio.html'">Faça seu Pedido</button>
+    </main>
+    <!-- Fim Main Content -->
+
+    <!-- Início Footer -->
+    <footer class="bg-red-600 pt-1 pb-2 md:pb-1 text-white text-center fixed bottom-0 left-0 right-0 z-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <div class="w-full md:w-1/2 mb-2 md:mb-0">
+                    <h2 class="text-lg font-bold mb-1 footer-text">O Seu Aplicativo Pizzaria Boa Massa</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim Footer -->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

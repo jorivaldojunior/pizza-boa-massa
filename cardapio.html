@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
+
+    <!--meta tag og-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pizzaria Boa Massa - A Melhor Pizza!" />
+    <meta property="og:image" content="https://pizzaria-boa-massa.netlify.app/assets/logo1.jpg" />
+    <meta property="og:description" content="A Melhor massa e recheio inesquecível!" />
+    <meta property="og:site_name" content="PizzariaBoaMassa" />
+
+
+    <link rel="stylesheet" href="./styles/output.css">
+    <title>Pizzaria Boa Massa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!--INICIO HEADER-->
+    <header class="w-full h-[420px] bg-cover bg-center" style="background-image: url('./assets/bg.png');">
+        <nav class="w-full bg-red-700 text-white p-4 fixed top-0 left-0 right-0 z-50 flex justify-between items-center">
+            <div class="max-w-7xl mx-auto flex justify-between items-center w-full flex-wrap">
+                <ul class="flex space-x-4 text-white flex-wrap">
+                    <li><a href="index.html" class="hover:underline">Inicio</a></li>
+                    <li><a href="cardapio.html" class="hover:underline">Pizzas</a></li>
+                    <li><a href="bebidas.html" class="hover:underline">Bebidas</a></li>
+                    <li><a href="https://www.instagram.com/Pizzariaboa_massa2019" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                </ul>
+                <button id="cart-btn" class="relative bg-green-500 text-white px-4 py-1 rounded ml-4 mt-2 md:mt-0">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart-count"
+                        class="absolute top-0 right-0 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </nav>
+        <div class="w-full h-full flex flex-col justify-center items-center mt-16 p-4">
+            <img src="./assets/logo1.jpg" alt="fundo"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
+            <h1 class="text-4xl mt-4 font-bold text-white text-center">Pizzaria Boa Massa</h1>
+            <span class="text-white font-medium text-center">Rua da Paz 244 - Cond. Praia de Jangada</span>
+            <span class="text-white font-medium text-center">Barra de Jangada- Jaboatão - PE</span>
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Terça a Domingo - 17:00 as 00:00</span>
+            </div>
+        </div>
+    </header>
+    <!--FIM DO HEADER-->
+</body>
+
+</html>
+
+
+
+<!-- INICIO MENU -->
+<div id="menu" class="pb-40">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-7 mx-auto max-w-7xl">
+        <!-- Conteúdo do menu aqui -->
+    </main>
+    <hr class="border-gray-300 my-8">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Conheça Nossas Pizzas</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7 mx-auto max-w-7xl">
+
+        <!-- PROD.01 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/calabresa.png" alt="pizza calabresa"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Calabresa</p>
+                    <p class="text-sm text-gray-700">Mussarela, Presunto, Calabresa, Cebola, Orégano e Azeitona.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Calabresa" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Calabresa
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Calabresa" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.01 -->
+
+        <!-- PROD.02 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/pizza.png" alt="Pizza de Mussarela"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Mussarela</p>
+                    <p class="text-sm text-gray-700">Mussarela, Orégano, Tomate e Azeitona.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Mussarela" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Mussarela
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Mussarela" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.02 -->
+
+
+        <!-- PROD.03 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/pizza3.png" alt="Pizza de Frango"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Frango</p>
+                    <p class="text-sm text-gray-700">Mussarela, Frango, Cebola, Tomate, Orégano e Azeitona.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Frango" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Frango
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Frango" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.03 -->
+
+
+        <!-- PROD.04 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/pizza11.png" alt="Pizza de Frango Catupiry"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Frango Catupiry</p>
+                    <p class="text-sm text-gray-700">Mussarela, Frango, Catupiry, Cebola, Tomate, Orégano e
+                        Azeitona.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Frango Catupiry" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Frango Catupiry
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Frango Catupiry" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.04 -->
+
+
+        <!-- PROD.05 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/pizza5.png" alt="Pizza de Portuguesa"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Portuguesa</p>
+                    <p class="text-sm text-gray-700">Mussarela, Presunto, Ovo, Pimentão, Tomate, Cebola, Orégano,
+                        Azeitona, Milho e Ervilha. </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Portuguesa" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Portuguesa
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Portuguesa" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.05 -->
+
+
+        <!-- PROD.06 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/pizza9.png" alt="Pizza de Marguerita"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Marguerita</p>
+                    <p class="text-sm text-gray-700">Mussarela, Tomate, Azeitona, Manjericão e Orégano.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Marguerita" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Marguerita
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Marguerita" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.06 -->
+
+
+        <!-- PROD.07 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/pizza6.png" alt="Pizza Moda da Casa"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza Moda da Casa</p>
+                    <p class="text-sm text-gray-700">Mussarela, Charque, Cebola, Tomate, Orégano e Azeitona.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza Moda da Casa" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Moda da Casa
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza Moda da Casa" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.07 -->
+
+
+        <!-- PROD.08 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/atum.jpg" alt="Pizza de Atum"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Atum</p>
+                    <p class="text-sm text-gray-700"></p>Mussarela, Atum, Cebola, Orégano, Tomate, Azeitona, Milho e
+                    Ervilha.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Atum" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Atum
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Atum" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.08 -->
+
+
+        <!-- PROD.09 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/3queijos.jpg" alt="Pizza de 3 Queijos"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de 3 Queijos</p>
+                    <p class="text-sm text-gray-700">Mussarela, Cheddar, Requeijão, Tomate, Orégano, Azeitona.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de 3 Queijos" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-3 Queijos
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de 3 Queijos" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.09 -->
+
+
+        <!-- PROD.10 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/mista.jpg" alt="Pizza Mista"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza Mista</p>
+                    <p class="text-sm text-gray-700">Mussarela, Presunto, Frango, Calabresa, Cheddar, Requeijão, Tomate,
+                        Cebola, Orégano e Azeitona.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza Mista" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Mista
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza Mista" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.10 -->
+
+
+        <!-- PROD.11 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/alho.jpg" alt="Pizza de Alho"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Alho</p>
+                    <p class="text-sm text-gray-700">Mussarela, Azeitona, Alho e Orégano.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Alho" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Alho
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Alho" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.11 -->
+
+
+        <!-- PROD.12 -->
+        <div
+            class="flex flex-col md:flex-row gap-4 p-4 bg-white rounded shadow-md hover:shadow-lg transition-shadow duration-300 items-center">
+            <img src="./assets/bacon.png" alt="Pizza de Bacon"
+                class="w-28 h-28 md:w-36 md:h-36 rounded-md hover:scale-110 hover:rotate-2 duration-300" />
+            <div class="flex flex-col justify-between w-full">
+                <div class="text-center md:text-left">
+                    <!-- Centraliza texto no centro e alinha à esquerda em telas maiores -->
+                    <p class="font-bold text-lg">Pizza de Bacon</p>
+                    <p class="text-sm text-gray-700">Mussarela, Bacon, Tomate, Cebola e Orégano.
+                    </p>
+
+                </div>
+                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-end mt-2">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tamanho:</label>
+                        <div class="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0 mt-1">
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Bacon" data-price="15.00" data-size="Metade">
+                                <i class="fa fa-cart-plus mr-2"></i> Metade-Bacon
+                            </button>
+                            <button
+                                class="size-btn bg-white px-5 py-2 rounded border border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                                data-name="Pizza de Bacon" data-price="30.00" data-size="G">
+                                <i class="fa fa-cart-plus mr-2"></i> G- R$30,00
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM PROD.12 -->
+    </div>
+</div>
+<!-- FIM DO MENU -->
+
+</main>
+
+<!-- INICIO FOOTER -->
+<footer class="bg-red-600 pt-1 pb-2 md:pb-1 text-white text-center fixed bottom-0 left-0 right-0 z-50">
+    <div class="container mx-auto max-w-4xl">
+        <div class="flex flex-wrap justify-center items-center gap-4">
+            <div class="w-full md:w-1/2 mb-2 md:mb-0">
+                <h3 class="text-lg font-bold mb-1">Nossa Promoção</h2>
+                    <p class="text-sm mb-1">Você tem a opção de montar sua pizza metade de um sabor e metade de
+                        outro e só paga R$30,00.</p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FIM FOOTER -->
+
+
+
+
+<!-- INÍCIO DO MODAL -->
+
+<div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+    <div class="bg-white p-5 rounded-md max-w-[90%] md:max-w-[600px] max-h-[80vh] overflow-y-auto">
+        <h2 class="text-center font-bold text-2xl mb-2">
+            <i class="fa fa-cart-plus"></i> Meu Carrinho
+        </h2>
+        <!-- Conteúdo do carrinho com barra de rolagem -->
+        <div id="cart-items" class="max-h-[200px] overflow-y-auto">
+            <!-- Aqui serão exibidos os itens do carrinho -->
+        </div>
+        <!-- Total do carrinho -->
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+        <!-- Formulário de informações do cliente -->
+        <p class="font-bold mt-4">Digite Seu Nome:</p>
+        <input type="text" placeholder="Digite seu nome" id="name" class="w-full border-2 p-1 rounded my-1" />
+        <p class="font-bold mt-4">Digite Seu Endereço Completo:</p>
+        <input type="text" placeholder="Digite seu endereço completo..." id="address"
+            class="w-full border-2 p-1 rounded my-1" />
+        <p class="text-red-500 hidden" id="address-warn">Digite Seu Endereço Completo</p>
+        <p class="font-bold mt-4">Forma de Pagamento:</p>
+        <select id="payment-method" class="w-full border-2 p-1 rounded my-1">
+            <option value="cartao">Cartão</option>
+            <option value="pix">Pix</option>
+            <option value="dinheiro">Dinheiro</option>
+        </select>
+        <!-- Campo para troco, visível apenas se a opção 'dinheiro' for selecionada -->
+        <div id="change-for-container" class="hidden">
+            <p class="font-bold mt-4">Troco para:</p>
+            <input type="text" placeholder="Digite o valor para troco" id="change-for"
+                class="w-full border-2 p-1 rounded my-1" />
+        </div>
+        <!-- Botões de ação no rodapé do modal -->
+        <div class="flex items-center justify-between mt-5 w-full">
+            <button id="close-modal-btn" class="bg-red-500 text-white px-4 py-1 rounded">Fechar</button>
+            <button class="bg-green-600 text-white px-4 py-1 rounded" id="finish-btn">Enviar</button>
+        </div>
+    </div>
+</div>
+<!-- FIM DO MODAL -->
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./script.js"></script>
+
+</body>
+
+</html>
